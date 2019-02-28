@@ -1,0 +1,19 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.6'
+}
+
+repositories {
+    jcenter();
+}
+
+dependencies {
+    compile 'com.gluonhq:strange:0.0.6'
+    compile 'com.gluonhq:strangefx:0.0.1'
+}
+
+javafx {
+    modules = [ 'javafx.controls' ]
+}
+
+mainClassName = 'com.gluonhq.javaqc.ch03.paulixui.Main'
