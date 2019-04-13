@@ -4,12 +4,11 @@ plugins {
 }
 
 repositories {
-    mavenLocal();
     mavenCentral();
 }
 
 dependencies {
-    compile 'com.gluonhq:strange:0.0.3-SNAPSHOT'
+    compile 'com.gluonhq:strange:0.0.6'
 }
 
 mainClassName = 'com.gluonhq.javaqc.ch02.hellostrange.Main'
