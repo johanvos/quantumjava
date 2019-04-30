@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Generate one random bit, which can be 0 or 1. Result = "+randomBit);
         int cntZero = 0;
         int cntOne = 0;
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = 0; i < 10000; i++) {
             if (Classic.randomBit() > 0) {
                 cntOne ++;
             } else {
