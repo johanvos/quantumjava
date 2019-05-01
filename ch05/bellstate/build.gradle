@@ -1,0 +1,15 @@
+plugins {
+    id 'application'
+    id 'org.javamodularity.moduleplugin' version '1.2.1'
+}
+
+repositories {
+    mavenLocal();
+    mavenCentral();
+}
+
+dependencies {
+    compile 'com.gluonhq:strange:0.0.6'
+}
+
+mainClassName = 'com.gluonhq.javaqc.ch05.bellstate.Main'
