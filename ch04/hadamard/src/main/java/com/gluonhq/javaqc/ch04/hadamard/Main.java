@@ -3,19 +3,21 @@ package com.gluonhq.javaqc.ch04.hadamard;
 import com.gluonhq.strange.*;
 import com.gluonhq.strange.gate.*;
 import com.gluonhq.strange.local.*;
+import com.gluonhq.strangefx.render.Renderer;
+
 
 public class Main {
 
     public static void main(String[] args) {
-        System.err.println("==================================================");
-        System.err.println("Single run of a Quantum Circuit with Hadamard Gate");
+        System.out.println("==================================================");
+        System.out.println("Single run of a Quantum Circuit with Hadamard Gate");
         singleExecution();
-        System.err.println("==================================================");
-        System.err.println("\n\n");
-        System.err.println("==================================================");
-        System.err.println("1000 runs of a Quantum Circuit with Hadamard Gate");
+        System.out.println("==================================================");
+        System.out.println("\n\n");
+        System.out.println("==================================================");
+        System.out.println("1000 runs of a Quantum Circuit with Hadamard Gate");
         manyExecution();
-        System.err.println("==================================================");
+        System.out.println("==================================================");
     }
 
     public static void singleExecution() {
@@ -29,6 +31,7 @@ public class Main {
         Qubit zero = qubits[0];
         int value = zero.measure();
         System.out.println("Value = "+value);
+        Renderer.renderProgram(program);
     }  
 
     public static void manyExecution() {

@@ -1,15 +1,20 @@
 plugins {
     id 'application'
-    id 'org.javamodularity.moduleplugin' version '1.2.1'
+    // id 'org.javamodularity.moduleplugin' version '1.2.1'
+    id 'org.openjfx.javafxplugin' version '0.0.6'
 }
 
 repositories {
-    mavenLocal();
     mavenCentral();
 }
 
 dependencies {
     compile 'com.gluonhq:strange:0.0.6'
+    compile 'com.gluonhq:strangefx:0.0.1'
+}
+
+javafx {
+    modules = [ 'javafx.controls' ]
 }
 
 mainClassName = 'com.gluonhq.javaqc.ch04.hadamard.Main'
