@@ -1,0 +1,14 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.6'
+}
+
+repositories {
+    jcenter();
+}
+
+javafx {
+    modules = [ 'javafx.controls' ]
+}
+
+mainClassName = 'com.gluonhq.javaqc.ch01.time.Main'
