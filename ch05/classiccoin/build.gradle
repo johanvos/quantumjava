@@ -1,0 +1,14 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+repositories {
+    mavenCentral();
+}
+
+dependencies {
+    compile 'com.gluonhq:strange:0.0.6'
+}
+
+mainClassName = 'com.gluonhq.javaqc.ch05.classiccoin.Main'
