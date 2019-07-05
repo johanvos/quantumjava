@@ -4,13 +4,12 @@ plugins {
 }
 
 repositories {
-    mavenLocal();
     mavenCentral();
 }
 
 dependencies {
     compile 'com.gluonhq:strange:0.0.6'
-    compile 'com.gluonhq:strangefx:0.0.2-SNAPSHOT'
+    compile 'com.gluonhq:strangefx:0.0.2'
 }
 
 javafx {
