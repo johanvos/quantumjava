@@ -11,4 +11,8 @@ dependencies {
     compile 'com.gluonhq:strange:0.0.6'
 }
 
-mainClassName = 'com.gluonhq.javaqc.ch05.classiccoin.Main'
+javafx {
+    modules = [ "javafx.controls" ]
+}
+
+mainClassName = 'com.gluonhq.javaqc.ch05.classiccoin.MainWindow'

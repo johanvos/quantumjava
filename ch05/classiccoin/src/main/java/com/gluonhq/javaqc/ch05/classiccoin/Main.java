@@ -10,20 +10,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int results[] = new int[4];
-        for (int i = 0; i < count; i++) {
-            boolean coinA = randomBit();
-            boolean coinB = randomBit();
-            if (!coinA && !coinB) results[0]++;
-            if (!coinA && coinB) results[1]++;
-            if (coinA && !coinB) results[2]++;
-            if (coinA && coinB) results[3]++;
-        }
+        int results[] = TwoCoins.calculate(count);
         System.out.println("We did "+count+" experiments.");
-        System.out.println("[AB]: 0 0 occured "+results[0]+" times.");
-        System.out.println("[AB]: 0 1 occured "+results[1]+" times.");
-        System.out.println("[AB]: 1 0 occured "+results[2]+" times.");
-        System.out.println("[AB]: 1 1 occured "+results[3]+" times.");
-    }  
+        System.out.println("0 0 occured "+results[0]+" times.");
+        System.out.println("0 1 occured "+results[1]+" times.");
+        System.out.println("1 0 occured "+results[2]+" times.");
+        System.out.println("1 1 occured "+results[3]+" times.");
+    }
+
 
 }
