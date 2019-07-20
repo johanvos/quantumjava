@@ -15,4 +15,4 @@ javafx {
     modules = [ "javafx.controls" ]
 }
 
-mainClassName = 'com.gluonhq.javaqc.ch05.classiccoin.MainWindow'
+mainClassName = 'com.gluonhq.javaqc.ch05.classiccoin.Main'
