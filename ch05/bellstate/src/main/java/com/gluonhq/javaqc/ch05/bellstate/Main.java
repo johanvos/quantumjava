@@ -23,8 +23,8 @@ public class Main {
         Qubit q1 = qubits[1];
         int v0 = q0.measure();
         int v1 = q1.measure();
-        System.out.println("v0 = "+v0+" and v1 = "+v1);
         Renderer.renderProgram(program);
+        Renderer.showProbabilities(program, 1000);
     }  
 
 }
