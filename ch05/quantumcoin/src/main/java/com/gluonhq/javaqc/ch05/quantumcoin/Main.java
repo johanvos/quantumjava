@@ -5,6 +5,7 @@ import com.gluonhq.strange.gate.*;
 import com.gluonhq.strange.local.*;
 import com.gluonhq.strangefx.render.Renderer;
 
+import javafx.application.Platform;
 
 public class Main {
 
@@ -35,9 +36,10 @@ public class Main {
         System.out.println("[AB]: 0 1 occured "+results[1]+" times.");
         System.out.println("[AB]: 1 0 occured "+results[2]+" times.");
         System.out.println("[AB]: 1 1 occured "+results[3]+" times.");
+        System.out.println("We will now render program");
 
         Renderer.renderProgram(program);
-
+        System.out.println("Done rendering, that's all folks.");
     }  
 
 }
