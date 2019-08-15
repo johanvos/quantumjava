@@ -39,6 +39,7 @@ public class Main {
         System.out.println("We will now render program");
 
         Renderer.renderProgram(program);
+        Renderer.showProbabilities(program, 1000);
         System.out.println("Done rendering, that's all folks.");
     }  
 
