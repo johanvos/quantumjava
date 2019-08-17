@@ -8,8 +8,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.gluonhq:strange:0.0.6'
-    compile 'com.gluonhq:strangefx:0.0.2'
+    compile 'com.gluonhq:strange:0.0.7'
+    compile 'com.gluonhq:strangefx:0.0.3'
 }
 
 javafx {

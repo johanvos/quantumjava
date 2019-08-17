@@ -28,6 +28,7 @@ public class Main {
         int v1 = q1.measure();
         System.out.println("v0 = "+v0+" and v1 = "+v1);
         Renderer.renderProgram(program);
+        Renderer.showProbabilities(program, 1000);
     }  
 
     private static void run01() {
