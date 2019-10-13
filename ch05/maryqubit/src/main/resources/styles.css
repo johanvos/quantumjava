@@ -1,0 +1,155 @@
+/**
+ * BSD 3-Clause License
+ *
+ * Copyright (c) 2017, Gluon Software
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * * Redistributions of source code must retain the above copyright notice, this
+ *   list of conditions and the following disclaimer.
+ *
+ * * Redistributions in binary form must reproduce the above copyright notice,
+ *   this list of conditions and the following disclaimer in the documentation
+ *   and/or other materials provided with the distribution.
+ *
+ * * Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from
+ *   this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+.root {
+    rootColor: #7b7d7b;
+    qubitColor: white;
+    icon-color: #636563;
+}
+.tool-bar {
+    -fx-background-color: #f1f1f1;
+}
+
+.button {
+    -fx-background-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.09);
+}
+
+.scroll-pane {
+    -fx-padding: 10;
+    -fx-background-color: qubitColor;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: qubitColor;
+}
+
+.qubit {
+    -fx-background-color: qubitColor;
+    -fx-pref-height: 77;
+}
+
+.qubit .wire{
+    -fx-stroke: rootColor;
+    -fx-stroke-width: 2;
+}
+
+.qubit .title {
+    -fx-padding: 10;
+    -fx-background-color: qubitColor;
+    -fx-text-fill: rootColor;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.qubit .base {
+    -fx-padding: 10 10 10 0;
+
+}
+
+.qubit .gate-row {
+    -fx-background-color: transparent;
+    -fx-spacing: 5;
+    -fx-alignment: center-left;
+}
+.measurement {
+    -fx-background-color: #ED74A9;
+    -fx-border-color: rootColor;
+    -fx-border-width: 0;
+    -fx-font-weight: bold;
+    /*-fx-effect: dropshadow(three-pass-box, grey, 7, 0, 2, 2);*/
+}
+
+.measurement .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-font-size: .9em;
+    -fx-font-weight: bold;
+    -fx-border-width: 1;
+    /*-fx-border-color: rootColor;*/
+}
+
+.measurement .progress {
+    -fx-background-color: #c16182;
+    -fx-stroke-width: 0;
+}
+
+.gate-symbol {
+    -fx-padding: 7;
+    -fx-background-color: #17C0EE;
+    -fx-border-width: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.4em;
+}
+
+.gate-symbol:hover {
+    -fx-border-width: 2;
+    -fx-border-insets: -2;
+    -fx-border-color: rootColor;
+}
+
+.gate-symbol.bitflip {
+    -fx-background-color: #A9CB4D;
+}
+
+.gate-symbol.superposition {
+    -fx-background-color: #17C0EE;
+}
+
+.gate-symbol.identity {
+    -fx-background-color: #FEC870;
+}
+
+.gate-spacer {
+    -fx-padding: 15;
+    -fx-border-width: 2;
+    -fx-background-color: rootColor;
+    -fx-border-color: rootColor;
+}
+
+.glyph-icon{
+    -fx-text-fill: icon-color;
+    -fx-fill: icon-color;
+}
+
+/* .glyph-icon:selected {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}*/
+
+.glyph-icon:hover{
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 0);
+}
