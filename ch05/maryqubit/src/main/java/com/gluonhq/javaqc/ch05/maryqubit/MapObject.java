@@ -88,7 +88,11 @@ public abstract class MapObject extends SpriteView {
         public void visit(SpriteView s) {
             if (s instanceof Mary) {
                 Mary mary = (Mary)s;
-
+                long ir = strangeBridge.getLongResult();
+                long total = mealsServed.get() + ir;
+                mary.getAnimals().clear();
+                strangeBridge.clearProgram();
+                mealsServed.setValue(total);
             }
         }
     }

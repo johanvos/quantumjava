@@ -94,6 +94,18 @@ public class StrangeBridge extends Group {
         renderProgram();
     }
 
+    public int getLongResult() {
+        System.err.println("get long result");
+        int result = 0;
+        Qubit[] qubits = this.result.getQubits();
+        for (Qubit q : qubits) {
+            result = 2 * result;
+            result = result + q.measure();
+        }
+        System.err.println("got long result");
+        return result;
+    }
+
     private Thread createMeasureThread() {
         System.err.println("Create measureThread");
         Thread t = new Thread() {
