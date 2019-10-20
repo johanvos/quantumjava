@@ -78,8 +78,6 @@ public class StrangeBridge extends Group {
         System.err.println("Strange Bridge, Render Program");
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         this.result = simulator.runProgram(this.program);
-//        this.program.printInfo();
-//        this.result.printInfo();
         this.getChildren().clear();
         this.getChildren().add(Renderer.getRenderGroup(this.program));
         if (measureThread.getState() == Thread.State.NEW) {

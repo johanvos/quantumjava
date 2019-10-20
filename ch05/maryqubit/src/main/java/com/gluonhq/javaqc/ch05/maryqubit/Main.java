@@ -40,7 +40,7 @@ public class Main extends Application {
         strangeBridge = new StrangeBridge();
 
         barn = new MapObject.Barn(new Location(2, 3), strangeBridge);
-        rainbow = new MapObject.Rainbow(new Location(5, 3), strangeBridge);
+        rainbow = new MapObject.Rainbow(new Location(5, 0), strangeBridge);
         chickenCoop = new MapObject.ChickenCoop(new Location(5, 4), strangeBridge);
         nest = new MapObject.Nest(new Location(3, 4), strangeBridge);
         Group root = new Group();

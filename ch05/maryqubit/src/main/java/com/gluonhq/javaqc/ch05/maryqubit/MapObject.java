@@ -24,7 +24,6 @@ public abstract class MapObject extends SpriteView {
             this.setGlow(true);
         } else {
             this.setGlow(false);
-          //  this.setColor(Color.WHITE);
         }
 
     }
@@ -56,7 +55,6 @@ public abstract class MapObject extends SpriteView {
         }
         @Override
         public void visit(SpriteView s) {
-            System.err.println("VISIT BY "+s+", active? "+active);
 
             if (!active) return;
             if (s instanceof Lamb) {
