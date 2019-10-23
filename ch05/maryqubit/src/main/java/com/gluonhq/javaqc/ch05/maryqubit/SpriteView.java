@@ -86,6 +86,7 @@ public class SpriteView extends StackPane {
             int ly = location.getValue().getY();
             int dx = direction.getXOffset();
             int dy = direction.getYOffset();
+            Main.setHelpText("Visit the barn to get a qubitlamb");
             if ((dx < 0 && lx <1) || (dy < 0 && ly <1)) return;
             if ((dx > 0 && lx > Main.HORIZONTAL_CELLS-2) || (dy > 0 && ly > Main.VERTICAL_CELLS-2)) return;
             moveTo(location.getValue().offset(direction.getXOffset(), direction.getYOffset()));

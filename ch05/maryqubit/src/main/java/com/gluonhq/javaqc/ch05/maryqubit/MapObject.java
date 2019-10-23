@@ -41,6 +41,8 @@ public abstract class MapObject extends SpriteView {
                 Lamb lamb = new SpriteView.Lamb(s);
                 mary.getAnimals().add(lamb);
                 this.strangeBridge.addQubit(lamb);
+                Main.setHelpText("Pressing X, H or C will\nactivate/deactivate the gates");
+
             }
         }
     }

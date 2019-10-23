@@ -2,6 +2,8 @@ package com.gluonhq.javaqc.ch05.maryqubit;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -32,7 +34,7 @@ public class Main extends Application {
     private MapObject.Nest nest;
 
     private StrangeBridge strangeBridge;
-
+    private static StringProperty helpTextProperty = new SimpleStringProperty("Help text appears here");
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -60,7 +62,7 @@ public class Main extends Application {
         fox.setScaleY(.5);
         root.getChildren().add(fox);
         root.getChildren().add(createHelpNode());
-
+        helpTextProperty.set("Use the arrows to navigate Mary");
         SpriteView.Mary mary = new SpriteView.Mary(new Location(0, 3));
         populateCells(root, mary);
         strangeBridge.setOpacity(0.5);
@@ -71,8 +73,13 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    public static void setHelpText(String t) {
+        helpTextProperty.set(t);
+    }
+
     private Group createHelpNode() {
-        Label help1 = new Label("Pressing X, H or C will\n activate/deactivate the gates");
+        Label help1 = new Label(); //"Pressing X, H or C will\n activate/deactivate the gates");
+        help1.textProperty().bind(helpTextProperty);
         help1.setStyle("-fx-background-color: white;-fx-font-size: 1.5em;");
 
         Group answer = new Group();
