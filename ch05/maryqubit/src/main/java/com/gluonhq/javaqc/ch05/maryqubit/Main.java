@@ -1,10 +1,10 @@
 package com.gluonhq.javaqc.ch05.maryqubit;
 
-import com.gluonhq.strange.Program;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -49,22 +49,17 @@ public class Main extends Application {
         populateBackground(root);
         scene.getStylesheets().add(Main.class.getResource("/styles.css").toExternalForm());
 
-        // This shows object generation:
         root.getChildren().add(barn);
-        // This one shows filtering
         root.getChildren().add(rainbow);
-        // This one demonstrates the additions to the List API:
         root.getChildren().add(new MapObject.Church(new Location(6, 2), strangeBridge));
-        // This demonstrates Map:
         root.getChildren().add(chickenCoop);
-        // And this one FlatMap:
         root.getChildren().add(nest);
-        // And finally aggregation:
         MapObject.Fox fox = new MapObject.Fox(new Location(7, 4), strangeBridge);
         fox.setDirection(Direction.LEFT);
         fox.setScaleX(.5);
         fox.setScaleY(.5);
         root.getChildren().add(fox);
+        root.getChildren().add(createHelpNode());
 
         SpriteView.Mary mary = new SpriteView.Mary(new Location(0, 3));
         populateCells(root, mary);
@@ -76,6 +71,17 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    private Group createHelpNode() {
+        Label help1 = new Label("Pressing X, H or C will\n activate/deactivate the gates");
+        help1.setStyle("-fx-background-color: white;-fx-font-size: 1.5em;");
+
+        Group answer = new Group();
+        answer.getChildren().addAll(help1);
+        answer.setTranslateY((VERTICAL_CELLS-1) * CELL_SIZE);
+        answer.setTranslateX((HORIZONTAL_CELLS-3)* CELL_SIZE);
+        return answer;
+
+    }
     private void populateBackground(Group root) {
         // Image by Victor Szalvay: http://www.flickr.com/photos/55502991@N00/172603855
         ImageView background = new ImageView(getClass().getResource("images/field.jpg").toString());
