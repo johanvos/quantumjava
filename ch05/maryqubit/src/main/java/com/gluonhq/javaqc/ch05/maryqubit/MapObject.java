@@ -21,11 +21,17 @@ public abstract class MapObject extends SpriteView {
     void toggleActive() {
         this.active = !this.active;
         if (active) {
+            Main.setHelpText(getGateName()+" Gate activated!\nLambs visiting this gate will be affected");
             this.setGlow(true);
         } else {
+            Main.setHelpText("");
             this.setGlow(false);
         }
 
+    }
+
+    String getGateName() {
+        return "";
     }
 
     public static class Barn extends MapObject {
@@ -71,6 +77,11 @@ public abstract class MapObject extends SpriteView {
                 }
             }
         }
+
+        @Override
+        public String getGateName() {
+            return "CNOT";
+        }
     }
 
     public static class Church extends MapObject {
@@ -97,6 +108,7 @@ public abstract class MapObject extends SpriteView {
                 mealsServed.setValue(total);
             }
         }
+
     }
 
     public static class ChickenCoop extends MapObject {
@@ -114,7 +126,11 @@ public abstract class MapObject extends SpriteView {
                 int number=lamb.getNumber();
                 this.strangeBridge.addX(number);
             }
+        }
 
+        @Override
+        public String getGateName() {
+            return "X";
         }
     }
 
@@ -133,6 +149,11 @@ public abstract class MapObject extends SpriteView {
                 int number=lamb.getNumber();
                 this.strangeBridge.addH(number);
             }
+        }
+
+        @Override
+        public String getGateName() {
+            return "H";
         }
     }
 

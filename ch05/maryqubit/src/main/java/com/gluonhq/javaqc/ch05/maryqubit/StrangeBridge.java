@@ -11,6 +11,7 @@ import com.gluonhq.strange.gate.Hadamard;
 import com.gluonhq.strange.gate.Identity;
 import com.gluonhq.strange.gate.X;
 import com.gluonhq.strange.local.SimpleQuantumExecutionEnvironment;
+import com.gluonhq.strange.ui.QubitBoard;
 import com.gluonhq.strangefx.render.Renderer;
 import javafx.scene.Group;
 
@@ -23,6 +24,7 @@ public class StrangeBridge extends Group {
     private final List<SpriteView.Lamb> qubitLamb = new LinkedList<>();
     private final Thread measureThread;
     private Result result;
+    private QubitBoard board;
 
     public StrangeBridge() {
         this.program = new Program(0);
@@ -41,12 +43,13 @@ public class StrangeBridge extends Group {
         double rnd =  Math.random();
         s1.addGate(new Identity(nc-1));
         this.program.addStep(s1);
-        System.err.println("Program HAS "+nc+" qubits");
+//        System.err.println("Program HAS "+nc+" qubits");
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         simulator.runProgram(this.program);
         this.getChildren().clear();
-        this.getChildren().add(Renderer.getRenderGroup(this.program));
+      //  this.getChildren().add(Renderer.getRenderGroup(this.program));
         qubitLamb.add(lamb);
+        renderProgram();
     }
 
     public void addH(int nr) {
@@ -75,11 +78,15 @@ public class StrangeBridge extends Group {
     }
 
     private synchronized void renderProgram() {
-        System.err.println("Strange Bridge, Render Program");
+//        System.err.println("Strange Bridge, Render Program");
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         this.result = simulator.runProgram(this.program);
         this.getChildren().clear();
-        this.getChildren().add(Renderer.getRenderGroup(this.program));
+        if (board != null) {
+            Renderer.disable(board);
+        }
+        board = Renderer.getRenderGroup(this.program);
+        this.getChildren().add(board);
         if (measureThread.getState() == Thread.State.NEW) {
             measureThread.start();
         }
@@ -91,23 +98,24 @@ public class StrangeBridge extends Group {
     public void clearProgram() {
         this.program.getSteps().clear();
         this.program = new Program(0);
+        this.qubitLamb.clear();
         renderProgram();
     }
 
     public int getLongResult() {
-        System.err.println("get long result");
+//        System.err.println("get long result");
         int result = 0;
         Qubit[] qubits = this.result.getQubits();
         for (Qubit q : qubits) {
             result = 2 * result;
             result = result + q.measure();
         }
-        System.err.println("got long result");
+//        System.err.println("got long result");
         return result;
     }
 
     private Thread createMeasureThread() {
-        System.err.println("Create measureThread");
+      //  System.err.println("Create measureThread");
         Thread t = new Thread() {
             @Override public void run() {
                 while (true) {
@@ -128,8 +136,9 @@ public class StrangeBridge extends Group {
                     }
                     int i = 0;
                     for (Qubit q : qubits) {
-                     //   System.err.println("set q["+i+"] to "+q.measure());
+//                        System.err.println("set q["+i+"] to "+q.measure());
                         SpriteView.Lamb target = qubitLamb.get(i++);
+//                        System.err.println("target = "+target);
                         target.setValue(q.measure());
                     }
                     try {

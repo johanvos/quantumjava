@@ -32,6 +32,7 @@ public class Main extends Application {
     private MapObject.ChickenCoop chickenCoop;
     private MapObject.Barn barn;
     private MapObject.Nest nest;
+    private SpriteView.Mary mary;
 
     private StrangeBridge strangeBridge;
     private static StringProperty helpTextProperty = new SimpleStringProperty("Help text appears here");
@@ -61,12 +62,13 @@ public class Main extends Application {
         fox.setScaleX(.5);
         fox.setScaleY(.5);
         root.getChildren().add(fox);
-        root.getChildren().add(createHelpNode());
         helpTextProperty.set("Use the arrows to navigate Mary");
-        SpriteView.Mary mary = new SpriteView.Mary(new Location(0, 3));
+        mary = new SpriteView.Mary(new Location(0, 3), this);
         populateCells(root, mary);
         strangeBridge.setOpacity(0.5);
         root.getChildren().add(strangeBridge);
+        root.getChildren().add(createHelpNode());
+
         root.getChildren().add(mary);
         addKeyHandler(scene, mary);
 
@@ -80,7 +82,7 @@ public class Main extends Application {
     private Group createHelpNode() {
         Label help1 = new Label(); //"Pressing X, H or C will\n activate/deactivate the gates");
         help1.textProperty().bind(helpTextProperty);
-        help1.setStyle("-fx-background-color: white;-fx-font-size: 1.5em;");
+        help1.setStyle("-fx-background-color: white;-fx-font-size: 1.3em;");
 
         Group answer = new Group();
         answer.getChildren().addAll(help1);
