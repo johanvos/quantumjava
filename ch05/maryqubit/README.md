@@ -3,7 +3,7 @@ Start the application as follows:
 
 You'll see Mary in a landscape with some objects that are hidden quantum
 gates.
-![](https://github.com/johanvos/quantumjava/blob/master/ch05/maryqubit/marylandscape.png)
+![](https://github.com/johanvos/quantumjava/blob/master/ch05/maryqubit/docs/marylandscape.png)
 
 Navigate using the arrows. When Mary visits the barn, a new lamb (which is a qubit) is added.
 For each lamb or qubit, a wire is added in the transparent top-section of the screen.
