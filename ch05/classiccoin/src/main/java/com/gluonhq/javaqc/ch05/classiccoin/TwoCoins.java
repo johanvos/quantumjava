@@ -1,10 +1,12 @@
 package com.gluonhq.javaqc.ch05.classiccoin;
 
+import java.util.Random;
+
 public class TwoCoins {
 
     private static boolean randomBit() {
-        double rand = Math.random();
-        return (rand > .5);
+        boolean answer = new Random().nextBoolean();
+        return answer;
     }
 
     public static int[] calculate(int count) {

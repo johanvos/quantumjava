@@ -1,5 +1,6 @@
 package com.gluonhq.javaqc.ch05.classiccoin;
 
+import java.util.Random;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,8 +18,8 @@ public class Main {
     private static final int count = 1000;
 
     private static boolean randomBit() {
-        double rand = Math.random();
-        return (rand > .5);
+        boolean answer = new Random().nextBoolean();
+        return answer;
     }
 
     public static void main(String[] args) {
