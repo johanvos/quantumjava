@@ -21,7 +21,7 @@
     <dependency>
       <groupId>com.gluonhq</groupId>
       <artifactId>strangefx</artifactId>
-      <version>0.0.6-SNAPSHOT</version>
+      <version>0.0.6</version>
     </dependency>
   </dependencies>
   <build>
