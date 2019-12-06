@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         Program program = new Program(3);
-        Step step0 = new Step();
-        step0.addGate(new X(0));
-        program.addStep(step0);
+        // Step step0 = new Step();
+        // step0.addGate(new X(0));
+        // program.addStep(step0);
         Step step1 = new Step();
         step1.addGate(new Hadamard(1));
         Step step2 = new Step();
@@ -35,6 +35,7 @@ public class Main {
         program.addStep(step5);
         program.addStep(step6);
         program.addStep(step7);
+        // program.initializeQubit(0, .4);
         Result result = simulator.runProgram(program);
         Qubit[] qubits = result.getQubits();
         Qubit q0 = qubits[0];
