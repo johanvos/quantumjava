@@ -20,12 +20,14 @@ public class Main {
         Thread t = new Thread() {
             @Override public void run() {
                 try {
+                    byte b = 0x8;
                     System.err.println("[Sender] Create a connection to port "+PORT);
                     Socket socket = new Socket("localhost", PORT);
                     OutputStream outputStream = socket.getOutputStream();
-                    System.err.println("[Sender] Write a byte: 8");
-                    outputStream.write(0x8);
+                    System.err.println("[Sender] Write a byte: "+b);
+                    outputStream.write(b);
                     outputStream.close();
+                    System.err.println("[Sender] Wrote a byte: "+b);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
