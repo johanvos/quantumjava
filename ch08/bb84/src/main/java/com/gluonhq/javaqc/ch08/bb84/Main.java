@@ -27,14 +27,17 @@ public class Main {
         Step superPositionStep2 = new Step();
         Step measureStep = new Step();
 
-
         for (int i = 0; i < SIZE; i++) {
             aliceBits[i] = random.nextBoolean();
+            // if Alice's bit is 1, apply a X gate to the |0> state
             if (aliceBits[i]) prepareStep.addGate(new X(i));
             aliceBase[i] = random.nextBoolean();
+            // if Alice's base for this bit is 1, apply a H gate
             if (aliceBase[i]) superPositionStep.addGate(new Hadamard(i));
             bobBase[i] = random.nextBoolean();
+            // if Bob decides to measure in base 1, apply a H gate
             if (bobBase[i]) superPositionStep2.addGate(new Hadamard(i));
+            // Finally, Bob measures the result
             measureStep.addGate(new Measurement(i));
         }
 
@@ -52,8 +55,11 @@ public class Main {
             measurement[i] = qubit[i].measure();
             bobBits[i] = measurement[i] == 1;
             if (aliceBase[i] != bobBase[i]) {
+                // If the random bases chosen by Alice and Bob for this bit are different, ignore values
                 System.err.println("Different bases used, ignore values "+aliceBits[i]+" and "+ bobBits[i]);
             } else {
+                // Alice and Bob picked the same bases. The inital value from Alice matches the measurement from Bob.
+                // this bit now becomes part of the secret key
                 System.err.println("Same bases used. Alice sent " + (aliceBits[i] ? "1" : "0") + " and Bob received " + (bobBits[i] ? "1" : "0"));
                 key.append(aliceBits[i] ? "1" : "0");
             }
