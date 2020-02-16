@@ -22,10 +22,9 @@ public class Main {
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         Random random = new Random();
         Program program = new Program(2);
-        Step step0 = new Step();
-        step0.addGate(new Hadamard(1));
+        Step step1 = new Step();
+        step1.addGate(new Hadamard(1));
 
-//        step0.addGate(new Hadamard(1));
 
         Complex[][] matrix =  new Complex[][]{
                 {Complex.ONE,Complex.ZERO,Complex.ZERO,Complex.ZERO},
@@ -38,13 +37,11 @@ public class Main {
 
         Step step2 = new Step();
         step2.addGate(oracle);
-//        step2.addGate(new Cnot(0,1));
 
-        program.addStep(step0);
+        program.addStep(step1);
         program.addStep(step2);
 
         Result result = simulator.runProgram(program);
-        Qubit[] qubits = result.getQubits();
         Renderer.showProbabilities(program,1000);
         Renderer.renderProgram(program);
 
