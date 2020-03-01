@@ -1,4 +1,4 @@
-package com.gluonhq.javaqc.ch09.deutsch;
+package com.gluonhq.javaqc.ch09.deutschjozsa;
 
 import com.gluonhq.strange.Complex;
 import com.gluonhq.strange.Program;
@@ -6,7 +6,6 @@ import com.gluonhq.strange.QuantumExecutionEnvironment;
 import com.gluonhq.strange.Qubit;
 import com.gluonhq.strange.Result;
 import com.gluonhq.strange.Step;
-import com.gluonhq.strange.gate.Cnot;
 import com.gluonhq.strange.gate.Hadamard;
 import com.gluonhq.strange.gate.Oracle;
 import com.gluonhq.strange.gate.X;
@@ -17,28 +16,33 @@ import java.util.Random;
 
 public class Main {
 
+    static final int N = 3;
+    
     public static void main(String[] args) {
 
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         Random random = new Random();
         Program program = null;
         for (int i = 0; i < 10; i++) {
-            program = new Program(2);
+            program = new Program(N+1);
             Step step0 = new Step();
-            step0.addGate(new X(1));
+            step0.addGate(new X(N));
 
             Step step1 = new Step();
-            step1.addGate(new Hadamard(0));
-            step1.addGate(new Hadamard(1));
+            for (int j = 0; j < N+1; j++) {
+                step1.addGate(new Hadamard(j));
+            }
 
             Step step2 = new Step();
-            int choice = random.nextInt(4);
-
+            int choice = random.nextInt(2);
+            choice = 1;
             Oracle oracle = createOracle(choice);
             step2.addGate(oracle);
 
             Step step3 = new Step();
-            step3.addGate(new Hadamard(0));
+            for (int j = 0; j < N; j++) {
+                step3.addGate(new Hadamard(j));
+            }
             
             program.addStep(step0);
             program.addStep(step1);
@@ -52,33 +56,31 @@ public class Main {
     }
 
     static Oracle createOracle(int f) {
-        Complex[][] matrix = new Complex[4][4];
+        int dim = 2 << N;
+        int half = dim/2;
+        
+        Complex[][] matrix = new Complex[dim][dim];
 
         switch (f) {
             case 0:
-                matrix[0][0] = Complex.ONE;
-                matrix[1][1] = Complex.ONE;
-                matrix[2][2] = Complex.ONE;
-                matrix[3][3] = Complex.ONE;
+                for (int i = 0; i < dim; i ++) {
+                    matrix[i][i] = Complex.ONE;
+                }
                 return new Oracle(matrix);
             case 1:
-                matrix[0][0] = Complex.ONE;
-                matrix[1][3] = Complex.ONE;
-                matrix[2][1] = Complex.ONE;
-                matrix[3][2] = Complex.ONE;
+                for (int i = 0; i < dim; i ++) {
+                    if (i%2 == 0) {
+                        matrix[i][i] = Complex.ONE;
+                    } else {
+                        if (i < half) {
+                            matrix[i][i + half] = Complex.ONE;
+                        } else{
+                            matrix[i][i - half] = Complex.ONE;
+                        }
+                    }
+                }
                 return new Oracle(matrix);
-            case 2:
-                matrix[0][2] = Complex.ONE;
-                matrix[1][1] = Complex.ONE;
-                matrix[2][0] = Complex.ONE;
-                matrix[3][3] = Complex.ONE;
-                return new Oracle(matrix);
-            case 3:
-                matrix[0][2] = Complex.ONE;
-                matrix[1][3] = Complex.ONE;
-                matrix[2][0] = Complex.ONE;
-                matrix[3][1] = Complex.ONE;
-                return new Oracle(matrix);
+         
             default:
                 throw new IllegalArgumentException("Wrong index in oracle");
         }

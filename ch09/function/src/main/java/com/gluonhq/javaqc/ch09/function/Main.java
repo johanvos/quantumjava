@@ -8,12 +8,12 @@ import java.util.Random;
 import java.util.function.Function;
 
 public class Main {
-    static List<Function<Integer, Integer>> functions = new ArrayList<>();
+    static final List<Function<Integer, Integer>> functions = new ArrayList<>();
     
     static {
         Function<Integer, Integer> f1 = (Integer t) -> 0;
         Function<Integer, Integer> f2 = (Integer t) -> (t == 0) ? 0 : 1;
-        Function<Integer, Integer> f3 = (Integer t) -> (t == 0 ) ? 1 : 0;
+        Function<Integer, Integer> f3 = (Integer t) -> (t == 0) ? 1 : 0;
         Function<Integer, Integer> f4 = (Integer t) -> 1;
         functions.addAll(Arrays.asList(f1, f2, f3, f4));
     }

@@ -16,7 +16,6 @@ public class Main {
     public static void main(String[] args) {
 
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
-        Random random = new Random();
         Program program = new Program(1);
         Step step0 = new Step();
         step0.addGate(new X(0));
@@ -31,7 +30,6 @@ public class Main {
         Qubit[] qubits = result.getQubits();
         Renderer.showProbabilities(program,1000);
         Renderer.renderProgram(program);
-
     }
 
 }
