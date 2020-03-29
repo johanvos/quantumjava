@@ -1,5 +1,6 @@
 package com.gluonhq.javaqc.ch10.classicsearch;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Function;
@@ -11,18 +12,33 @@ public class Main {
         Main main = new Main();
         main.complexSearch();
     }
-    
+
     void complexSearch() {
-        List<Person> persons = prepareDatabase();
-        Person target = findPersonByAgeAndCountry(persons, 29, "Mexico");
-        System.out.println("Result of complex search = "+target.getName());
+        for (int i = 0; i < 100; i++) {
+            List<Person> persons = prepareDatabase();
+            Collections.shuffle(persons);
+            Person target = findPersonByAgeAndCountry(persons, 29, "Mexico");
+            System.out.println("Result of complex search = " + target.getName());
+        }
     }
     
     Person findPersonByAgeAndCountry(List<Person> persons, int age, String country) {
+        boolean found = false;
+        int idx = 0;
+        while (!found && (idx<persons.size())) {
+            Person target = persons.get(idx++);
+            if ((target.getAge() == age) && (target.getCountry().equals(country))) {
+                found = true;
+            }
+        }
+        System.out.println("Got result after "+idx+" tries");
+        return persons.get(idx-1);
+/*
         return persons.stream()
                 .filter(p -> {return (p.getAge() == age && p.getCountry().equals(country));})
                 .findFirst().get();
-    }
+*/  
+}
     
     List<Person> prepareDatabase() {
         List<Person> persons = new LinkedList<>();
