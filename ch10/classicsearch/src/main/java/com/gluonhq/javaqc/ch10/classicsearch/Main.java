@@ -11,10 +11,11 @@ public class Main {
         System.err.println("Hello, classical search");
         Main main = new Main();
         main.complexSearch();
+        main.functionSearch();
     }
 
     void complexSearch() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             List<Person> persons = prepareDatabase();
             Collections.shuffle(persons);
             Person target = findPersonByAgeAndCountry(persons, 29, "Mexico");
@@ -37,8 +38,32 @@ public class Main {
         return persons.stream()
                 .filter(p -> {return (p.getAge() == age && p.getCountry().equals(country));})
                 .findFirst().get();
-*/  
+*/
 }
+    
+    void functionSearch() {
+        Function<Person, Integer> f29Mexico = 
+                (Person p) -> ((p.getAge()==29) && (p.getCountry().equals("Mexico")) ) ? 1 : 0;
+                for (int i = 0; i < 10; i++) {
+        List<Person> persons = prepareDatabase();
+            Collections.shuffle(persons);
+            Person target = findPersonByAgeAndCountry(persons, 29, "Mexico");
+            System.out.println("Result of function search = " + target.getName());
+        }
+    }
+    
+    Person findPersonByFunction(List<Person> persons, Function<Person, Integer> function) {
+        boolean found = false;
+        int idx = 0;
+        while (!found && (idx<persons.size())) {
+            Person target = persons.get(idx++);
+            if (function.apply(target) == 1) {
+                found = true;
+            }
+        }
+        System.out.println("Got result after "+idx+" tries");
+        return persons.get(idx-1); 
+    }
     
     List<Person> prepareDatabase() {
         List<Person> persons = new LinkedList<>();
