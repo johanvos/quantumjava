@@ -42,16 +42,16 @@ public class Main {
 }
     
     void functionSearch() {
-        Function<Person, Integer> f29Mexico = 
-                (Person p) -> ((p.getAge()==29) && (p.getCountry().equals("Mexico")) ) ? 1 : 0;
-                for (int i = 0; i < 10; i++) {
-        List<Person> persons = prepareDatabase();
+        Function<Person, Integer> f29Mexico
+                = (Person p) -> ((p.getAge() == 29) && (p.getCountry().equals("Mexico"))) ? 1 : 0;
+        for (int i = 0; i < 10; i++) {
+            List<Person> persons = prepareDatabase();
             Collections.shuffle(persons);
-            Person target = findPersonByAgeAndCountry(persons, 29, "Mexico");
-            System.out.println("Result of function search = " + target.getName());
+            Person target = findPersonByFunction(persons, f29Mexico);
+            System.out.println("Result of function Search = " + target.getName());
         }
     }
-    
+
     Person findPersonByFunction(List<Person> persons, Function<Person, Integer> function) {
         boolean found = false;
         int idx = 0;
