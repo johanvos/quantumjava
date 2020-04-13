@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gluonhq.javaqc</groupId>
+  <artifactId>stepbystepgrover</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>stepbystepgrover</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>13.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.gluonhq</groupId>
+      <artifactId>strange</artifactId>
+      <version>0.0.12-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.gluonhq</groupId>
+      <artifactId>strangefx</artifactId>
+      <version>0.0.8</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.3</version>
+        <configuration>
+          <mainClass>com.gluonhq.javaqc.ch10.stepbystepgrover.Main</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
