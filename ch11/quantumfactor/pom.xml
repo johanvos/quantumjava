@@ -39,6 +39,7 @@
         <version>0.0.4</version>
         <configuration>
           <mainClass>com.javaqc.ch11.quantumfactor.Main</mainClass>
+          <includePathExceptionsInClasspath>true</includePathExceptionsInClasspath>
         </configuration>
       </plugin>
       <plugin>
