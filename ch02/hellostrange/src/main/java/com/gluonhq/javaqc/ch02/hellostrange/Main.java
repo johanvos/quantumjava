@@ -1,6 +1,6 @@
 package com.gluonhq.javaqc.ch02.hellostrange;
 
-import com.gluonhq.strange.algorithm.Classic;
+import org.redfx.strange.algorithm.Classic;
 
 public class Main {
 

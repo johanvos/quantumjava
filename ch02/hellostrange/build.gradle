@@ -1,6 +1,5 @@
 plugins {
     id 'application'
-    id 'org.javamodularity.moduleplugin' version '1.2.1'
 }
 
 repositories {
@@ -8,7 +7,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.gluonhq:strange:0.0.6'
+    compile 'org.redfx:strange:0.0.16'
 }
 
 mainClassName = 'com.gluonhq.javaqc.ch02.hellostrange.Main'
