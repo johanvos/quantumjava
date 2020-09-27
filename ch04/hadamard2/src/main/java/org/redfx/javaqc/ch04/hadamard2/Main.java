@@ -1,8 +1,8 @@
-package com.gluonhq.javaqc.ch04.hadamard2;
+package org.redfx.javaqc.ch04.hadamard2;
 
-import com.gluonhq.strange.*;
-import com.gluonhq.strange.gate.*;
-import com.gluonhq.strange.local.*;
+import org.redfx.strange.*;
+import org.redfx.strange.gate.*;
+import org.redfx.strange.local.*;
 
 public class Main {
 

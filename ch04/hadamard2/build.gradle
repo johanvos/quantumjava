@@ -1,15 +1,13 @@
 plugins {
     id 'application'
-    id 'org.javamodularity.moduleplugin' version '1.2.1'
 }
 
 repositories {
-    mavenLocal();
     mavenCentral();
 }
 
 dependencies {
-    compile 'com.gluonhq:strange:0.0.6'
+    compile 'org.redfx:strange:0.0.17'
 }
 
-mainClassName = 'com.gluonhq.javaqc.ch04.hadamard2.Main'
+mainClassName = 'org.redfx.javaqc.ch04.hadamard2.Main'
