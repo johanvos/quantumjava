@@ -1,4 +1,4 @@
-package com.gluonhq.javaqc.ch03.paulix;
+package org.redfx.javaqc.ch03.paulix;
 
 import org.redfx.strange.*;
 import org.redfx.strange.gate.*;

@@ -3,7 +3,6 @@ plugins {
 }
 
 repositories {
-    mavenLocal();
     mavenCentral();
 }
 
@@ -11,4 +10,4 @@ dependencies {
     compile 'org.redfx:strange:0.0.17'
 }
 
-mainClassName = 'com.gluonhq.javaqc.ch03.paulix.Main'
+mainClassName = 'org.redfx.javaqc.ch03.paulix.Main'
