@@ -1,9 +1,9 @@
-package com.gluonhq.javaqc.ch03.paulixui;
+package org.redfx.javaqc.ch03.paulixui;
 
-import com.gluonhq.strange.*;
-import com.gluonhq.strange.gate.*;
-import com.gluonhq.strange.local.*;
-import com.gluonhq.strangefx.render.Renderer;
+import org.redfx.strange.*;
+import org.redfx.strange.gate.*;
+import org.redfx.strange.local.*;
+import org.redfx.strangefx.render.Renderer;
 
 
 public class Main {
