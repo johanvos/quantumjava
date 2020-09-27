@@ -10,6 +10,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
   </properties>
 
   <dependencies>
@@ -19,9 +21,9 @@
       <version>12.0.2</version>
     </dependency>
     <dependency>
-      <groupId>com.gluonhq</groupId>
+      <groupId>org.redfx</groupId>
       <artifactId>strangefx</artifactId>
-      <version>0.0.5</version>
+      <version>0.0.9</version>
     </dependency>
   </dependencies>
   <build>
@@ -29,9 +31,9 @@
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.3</version>
+        <version>0.0.4</version>
         <configuration>
-          <mainClass>com.gluonhq.javaqc.ch05.bellstate.Main</mainClass>
+          <mainClass>org.redfx.javaqc.ch05.bellstate.Main</mainClass>
         </configuration>
       </plugin>
     </plugins>
