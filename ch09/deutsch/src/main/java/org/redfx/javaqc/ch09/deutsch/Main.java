@@ -1,17 +1,17 @@
-package com.gluonhq.javaqc.ch09.deutsch;
+package org.redfx.javaqc.ch09.deutsch;
 
-import com.gluonhq.strange.Complex;
-import com.gluonhq.strange.Program;
-import com.gluonhq.strange.QuantumExecutionEnvironment;
-import com.gluonhq.strange.Qubit;
-import com.gluonhq.strange.Result;
-import com.gluonhq.strange.Step;
-import com.gluonhq.strange.gate.Cnot;
-import com.gluonhq.strange.gate.Hadamard;
-import com.gluonhq.strange.gate.Oracle;
-import com.gluonhq.strange.gate.X;
-import com.gluonhq.strange.local.SimpleQuantumExecutionEnvironment;
-import com.gluonhq.strangefx.render.Renderer;
+import org.redfx.strange.Complex;
+import org.redfx.strange.Program;
+import org.redfx.strange.QuantumExecutionEnvironment;
+import org.redfx.strange.Qubit;
+import org.redfx.strange.Result;
+import org.redfx.strange.Step;
+import org.redfx.strange.gate.Cnot;
+import org.redfx.strange.gate.Hadamard;
+import org.redfx.strange.gate.Oracle;
+import org.redfx.strange.gate.X;
+import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
+import org.redfx.strangefx.render.Renderer;
 
 import java.util.Random;
 
@@ -46,7 +46,7 @@ public class Main {
             program.addStep(step3);
             Result result = simulator.runProgram(program);
             Qubit[] qubits = result.getQubits();
-            System.err.println("f = "+choice+", val = "+qubits[0].measure());
+            System.err.println("f = "+(choice+1)+", val = "+qubits[0].measure());
         }
         Renderer.renderProgram(program);
     }

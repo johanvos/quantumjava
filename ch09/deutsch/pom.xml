@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.gluonhq.javaqc</groupId>
+  <groupId>org.redfx.javaqc</groupId>
   <artifactId>deutsch</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -18,12 +18,12 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>13.0.1</version>
+      <version>15</version>
     </dependency>
     <dependency>
-      <groupId>com.gluonhq</groupId>
+      <groupId>org.redfx</groupId>
       <artifactId>strangefx</artifactId>
-      <version>0.0.9-SNAPSHOT</version>
+      <version>0.0.9</version>
     </dependency>
   </dependencies>
   <build>
@@ -33,7 +33,7 @@
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.3</version>
         <configuration>
-          <mainClass>com.gluonhq.javaqc.ch09.deutsch.Main</mainClass>
+          <mainClass>org.redfx.javaqc.ch09.deutsch.Main</mainClass>
         </configuration>
       </plugin>
     </plugins>
