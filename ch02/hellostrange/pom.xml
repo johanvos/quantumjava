@@ -23,7 +23,7 @@
     <dependency>
       <groupId>org.redfx</groupId>
       <artifactId>strange</artifactId>
-      <version>0.0.14</version>
+      <version>0.0.17</version>
     </dependency>
   </dependencies>
   <build>
@@ -33,7 +33,7 @@
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.4</version>
         <configuration>
-          <mainClass>com.gluonhq.javaqc.ch02.hellostrange.Main</mainClass>
+          <mainClass>org.redfx.javaqc.ch02.hellostrange.Main</mainClass>
         </configuration>
       </plugin>
     </plugins>
