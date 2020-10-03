@@ -26,6 +26,7 @@ public class Main {
         Step p2 = new Step (new ProbabilitiesGate(0));
 
         program.addSteps(p0, step0, p1, step1, p2);
+       // program.addSteps(step0, step1);
         
         QuantumExecutionEnvironment qee = new SimpleQuantumExecutionEnvironment();
         Result result = qee.runProgram(program);

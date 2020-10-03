@@ -1,7 +1,5 @@
-package com.gluonhq.javaqc.ch05.classiccoin;
-
-import java.util.Random;
-import javafx.application.Platform;
+package org.redfx.javaqc.ch05.classiccoin;
+import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
@@ -9,47 +7,29 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Main {
+public class MainWindow extends Application {
 
     private static final int count = 1000;
 
-    private static boolean randomBit() {
-        boolean answer = new Random().nextBoolean();
-        return answer;
-    }
-
-    public static void main(String[] args) {
+    @Override
+    public void start(Stage stage) throws Exception {
         int results[] = TwoCoins.calculate(count);
-        System.out.println("We did "+count+" experiments.");
-        System.out.println("0 0 occured "+results[0]+" times.");
-        System.out.println("0 1 occured "+results[1]+" times.");
-        System.out.println("1 0 occured "+results[2]+" times.");
-        System.out.println("1 1 occured "+results[3]+" times.");
-        Platform.startup(() -> showResults(results));
-    }
-
-    private static void showResults(int[] results) {
         CategoryAxis xAxis = new CategoryAxis();
         NumberAxis yAxis = new NumberAxis();
         BarChart<String, Integer> barChart = new BarChart(xAxis, yAxis);
         barChart.setData(getChartData(results));
-        barChart.setTitle("Classic probability distribution");
         StackPane root = new StackPane();
         root.getChildren().add(barChart);
-        Stage stage = new Stage();
-        stage.setTitle("Two coins, classic case");
         stage.setScene(new Scene(root, 640, 480));
         stage.show();
     }
 
-    private static ObservableList<XYChart.Series<String, Integer>> getChartData(int[] results) {
+    private ObservableList<XYChart.Series<String, Integer>> getChartData(int[] results) {
         ObservableList<XYChart.Series<String, Integer>> answer = FXCollections.observableArrayList();
         XYChart.Series<String, Integer> series = new XYChart.Series<>();
-        series.setName("occurences");
         answer.add(series);
         for (int i = 0; i < results.length;i++) {
             series.getData().add(new XYChart.Data<>(getFixedBinaryString(i, (int) (Math.log(results.length)/Math.log(2))), results[i]));
@@ -57,12 +37,11 @@ public class Main {
         return answer;
     }
 
-    private static String getFixedBinaryString(int i, int w) {
+    private String getFixedBinaryString(int i, int w) {
         StringBuffer buff = new StringBuffer(Integer.toBinaryString(i));
         while (buff.length() < w) {
             buff.insert(0, "0");
         }
         return buff.toString();
     }
-
 }

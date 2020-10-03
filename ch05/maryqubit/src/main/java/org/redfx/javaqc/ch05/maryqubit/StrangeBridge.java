@@ -29,21 +29,21 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.gluonhq.javaqc.ch05.maryqubit;
+package org.redfx.javaqc.ch05.maryqubit;
 
-import com.gluonhq.strange.Complex;
-import com.gluonhq.strange.Program;
-import com.gluonhq.strange.QuantumExecutionEnvironment;
-import com.gluonhq.strange.Qubit;
-import com.gluonhq.strange.Result;
-import com.gluonhq.strange.Step;
-import com.gluonhq.strange.gate.Cnot;
-import com.gluonhq.strange.gate.Hadamard;
-import com.gluonhq.strange.gate.Identity;
-import com.gluonhq.strange.gate.X;
-import com.gluonhq.strange.local.SimpleQuantumExecutionEnvironment;
-import com.gluonhq.strange.ui.QubitBoard;
-import com.gluonhq.strangefx.render.Renderer;
+import org.redfx.strange.Complex;
+import org.redfx.strange.Program;
+import org.redfx.strange.QuantumExecutionEnvironment;
+import org.redfx.strange.Qubit;
+import org.redfx.strange.Result;
+import org.redfx.strange.Step;
+import org.redfx.strange.gate.Cnot;
+import org.redfx.strange.gate.Hadamard;
+import org.redfx.strange.gate.Identity;
+import org.redfx.strange.gate.X;
+import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
+import org.redfx.strange.ui.QubitBoard;
+import org.redfx.strangefx.render.Renderer;
 import javafx.scene.Group;
 
 import java.util.LinkedList;

@@ -23,7 +23,7 @@
     <dependency>
       <groupId>org.redfx</groupId>
       <artifactId>strange</artifactId>
-      <version>0.0.14</version>
+      <version>0.0.15-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.gluonhq</groupId>

@@ -1,9 +1,9 @@
-package com.gluonhq.javaqc.ch05.cnot;
+package org.redfx.javaqc.ch05.cnot;
 
-import com.gluonhq.strange.*;
-import com.gluonhq.strange.gate.*;
-import com.gluonhq.strange.local.*;
-import com.gluonhq.strangefx.render.*;
+import org.redfx.strange.*;
+import org.redfx.strange.gate.*;
+import org.redfx.strange.local.*;
+import org.redfx.strangefx.render.*;
 
 public class Main {
 

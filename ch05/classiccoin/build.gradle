@@ -8,11 +8,11 @@ repositories {
 }
 
 dependencies {
-    compile 'com.gluonhq:strange:0.0.6'
+    compile 'org.redfx:strange:0.0.17'
 }
 
 javafx {
     modules = [ "javafx.controls" ]
 }
 
-mainClassName = 'com.gluonhq.javaqc.ch05.classiccoin.Main'
+mainClassName = 'org.redfx.javaqc.ch05.classiccoin.Main'

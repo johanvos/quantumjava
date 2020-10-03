@@ -8,8 +8,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.gluonhq:strange:0.0.7'
-    compile 'com.gluonhq:strangefx:0.0.3'
+    compile 'org.redfx:strange:0.0.17'
+    compile 'org.redfx:strangefx:0.0.10'
 }
 
 javafx {
@@ -18,4 +18,4 @@ javafx {
 }
 
 
-mainClassName = 'com.gluonhq.javaqc.ch05.cnot.Main'
+mainClassName = 'org.redfx.javaqc.ch05.cnot.Main'

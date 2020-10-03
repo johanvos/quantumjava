@@ -1,4 +1,4 @@
-package com.gluonhq.javaqc.ch05.classiccoin;
+package org.redfx.javaqc.ch05.classiccoin;
 
 import java.util.Random;
 
