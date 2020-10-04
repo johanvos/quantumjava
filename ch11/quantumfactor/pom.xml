@@ -22,13 +22,8 @@
     </dependency>
     <dependency>
       <groupId>org.redfx</groupId>
-      <artifactId>strange</artifactId>
-      <version>0.0.15-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.gluonhq</groupId>
       <artifactId>strangefx</artifactId>
-      <version>0.0.8</version>
+      <version>0.0.9</version>
     </dependency>
   </dependencies>
   <build>

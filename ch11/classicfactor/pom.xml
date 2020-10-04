@@ -21,14 +21,9 @@
       <version>13.0.1</version>
     </dependency>
     <dependency>
-      <groupId>com.gluonhq</groupId>
-      <artifactId>strange</artifactId>
-      <version>0.0.12</version>
-    </dependency>
-    <dependency>
-      <groupId>com.gluonhq</groupId>
+      <groupId>org.redfx</groupId>
       <artifactId>strangefx</artifactId>
-      <version>0.0.8</version>
+      <version>0.0.9</version>
     </dependency>
   </dependencies>
   <build>
@@ -36,8 +31,9 @@
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.3</version>
+        <version>0.0.4</version>
         <configuration>
+          <includePathExceptionsInClasspath>true</includePathExceptionsInClasspath>
           <mainClass>com.javaqc.ch11.classicfactor.Main</mainClass>
         </configuration>
       </plugin>
