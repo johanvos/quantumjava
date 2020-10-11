@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.redfx</groupId>
-  <artifactId>repeater</artifactId>
+  <artifactId>hadamard</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>repeater</name>
+  <name>hadamard</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -33,7 +33,23 @@
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.4</version>
         <configuration>
-          <mainClass>org.redfx.javaqc.ch06.repeater.Main</mainClass>
+          <mainClass>org.redfx.javaqc.ch04.hadamard.Main</mainClass>
+          <includePathExceptionsInClasspath>true</includePathExceptionsInClasspath>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>org.redfx.javaqc.ch04.hadamard.Main</mainClass>
         </configuration>
       </plugin>
     </plugins>

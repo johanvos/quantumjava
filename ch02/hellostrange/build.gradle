@@ -7,7 +7,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.redfx:strange:0.0.16'
+    compile 'org.redfx:strange:0.0.17'
 }
 
 mainClassName = 'org.redfx.javaqc.ch02.hellostrange.Main'
