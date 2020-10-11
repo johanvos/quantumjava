@@ -10,4 +10,4 @@ dependencies {
     compile 'org.redfx:strange:0.0.16'
 }
 
-mainClassName = 'com.gluonhq.javaqc.ch02.hellostrange.Main'
+mainClassName = 'org.redfx.javaqc.ch02.hellostrange.Main'
