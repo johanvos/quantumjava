@@ -11,4 +11,4 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 
-mainClassName = 'com.gluonhq.javaqc.ch01.time.Main'
+mainClassName = 'org.redfx.javaqc.ch01.time.Main'

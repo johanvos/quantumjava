@@ -25,6 +25,6 @@ and a UI similar to this:
 <img src="https://github.com/johanvos/quantumjava/blob/master/ch08/bb84/bb84.png"/>
 
 More sample info at the root of this project.
-This sample uses the <a href="https://github.com/gluonhq/strange">Strange</a>
+This sample uses the <a href="https://github.com/redfx-quantum/strange">Strange</a>
 Quantum Simulator.
 It is discussed in <a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9">Quantum Computing for Java Developers</a>.

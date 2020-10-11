@@ -1,4 +1,4 @@
-package com.gluonhq.javaqc.ch01.time;
+package org.redfx.javaqc.ch01.time;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
