@@ -1,4 +1,4 @@
-package org.redfx.javaqc.ch07.randombit;
+package org.redfx.javaqc.ch07.randombitdebug;
 
 import org.redfx.strange.Program;
 import org.redfx.strange.QuantumExecutionEnvironment;
@@ -19,10 +19,13 @@ public class Main {
     public static void main (String[] args) {
         
         Program program = new Program(dim);
+        Step p0 = new Step (new ProbabilitiesGate(0));
         Step step0 = new Step(new Hadamard(0), new X(3));
+        Step p1 = new Step (new ProbabilitiesGate(0));
         Step step1 = new Step(new Cnot(0,1));
+        Step p2 = new Step (new ProbabilitiesGate(0));
 
-        program.addSteps(step0, step1);
+        program.addSteps(p0, step0, p1, step1, p2);
         
         QuantumExecutionEnvironment qee = new SimpleQuantumExecutionEnvironment();
         Result result = qee.runProgram(program);
