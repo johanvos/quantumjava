@@ -7,10 +7,8 @@ import org.redfx.strange.local.*;
 import org.redfx.strangefx.render.Renderer;
 
 import java.util.*;
-import org.redfx.strangend4j.Nd4jQuantumExecutionEnvironment;
 
 public class Main {
-    static QuantumExecutionEnvironment qee = new Nd4jQuantumExecutionEnvironment();
     static SimpleQuantumExecutionEnvironment sqee = new SimpleQuantumExecutionEnvironment();
 
    //  private static final int dim = 2;
