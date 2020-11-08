@@ -12,18 +12,30 @@ public class Main {
     }
 
     public static int factor (int N) {
+        // PREPROCESSING
+        // Here, the preprocessing part begins.
         System.out.println("We need to factor "+N);
+
+        // Pick a random number `a` between 1 and `N`
         int a = 1+ (int)((N-1) * Math.random());
         System.out.println("Pick a random number a, a < N: "+a);
+
+        // Calculate the greatest common denominator (GCD) between `a` and `N`
         int gcdan = gcd(N,a);
         System.out.println("calculate gcd(a, N):"+ gcdan); 
+
+        // In case this GCD is not `1`, we are done, since that means the GCD is a factor of `N`
         if (gcdan != 1) return gcdan;
+
+        // Find the periodicity of the modular exponentiatio function.
         int p = findPeriod (a, N); 
         System.out.println("period of f = "+p);
         if (p%2 == 1) { 
+            // If the period turns out to be an odd number, we can't use it and have to repeat the process
             System.out.println("bummer, odd period, restart.");
             return factor(N);
         }
+        // Perform some minor mathematical operations on the period to obtain a factor of `N`.
         int md = (int)(Math.pow(a, p/2) +1);
         int m2 = md%N; 
         if (m2 == 0) { 
