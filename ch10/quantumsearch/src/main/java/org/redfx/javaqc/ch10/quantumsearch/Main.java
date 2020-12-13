@@ -9,7 +9,7 @@ import java.util.function.Function;
 public class Main {
 
     public static void main (String[] args) {
-        System.err.println("Hello, classical search");
+        System.err.println("Hello, quantum search");
         Main main = new Main();
         main.quantumSearch();
     }
