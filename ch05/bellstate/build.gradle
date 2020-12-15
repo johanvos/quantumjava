@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     compile 'org.redfx:strange:0.0.17'
-    compile 'org.redfx:strangefx:0.0.9'
+    compile 'org.redfx:strangefx:0.0.10'
 }
 
 javafx {
