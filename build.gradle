@@ -1,0 +1,76 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "application"
+    apply plugin: "org.openjfx.javafxplugin"
+
+    javafx {
+        version = "15.0.1"
+        modules = [ 'javafx.controls' ]
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.redfx:strange:0.0.17'
+        implementation 'org.redfx:strangefx:0.0.10'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+project(':ch02:hellostrange').application.mainClassName="org.redfx.javaqc.ch02.hellostrange.Main"
+project(':ch03:paulix').application.mainClassName="org.redfx.javaqc.ch03.paulix.Main"
+project(':ch03:paulixui').application.mainClassName="org.redfx.javaqc.ch03.paulixui.Main"
+project(':ch04:hadamard').application.mainClassName="org.redfx.javaqc.ch04.hadamard.Main"
+project(':ch04:hadamard2').application.mainClassName="org.redfx.javaqc.ch04.hadamard2.Main"
+project(':ch05:bellstate').application.mainClassName="org.redfx.javaqc.ch05.bellstate.Main"
+project(':ch05:classiccoin').application.mainClassName="org.redfx.javaqc.ch05.classiccoin.Main"
+project(':ch05:cnot').application.mainClassName="org.redfx.javaqc.ch05.cnot.Main"
+project(':ch05:maryqubit').application.mainClassName="org.redfx.javaqc.ch05.maryqubit.Main"
+project(':ch05:quantumcoin').application.mainClassName="org.redfx.javaqc.ch05.quantumcoin.Main"
+project(':ch06:classic').application.mainClassName="org.redfx.javaqc.ch06.classic.Main"
+project(':ch06:classiccopy').application.mainClassName="org.redfx.javaqc.ch06.classiccopy.Main"
+project(':ch06:repeater').application.mainClassName="org.redfx.javaqc.ch06.repeater.Main"
+project(':ch06:teleport').application.mainClassName="org.redfx.javaqc.ch06.teleport.Main"
+project(':ch07:intermediate').application.mainClassName="org.redfx.javaqc.ch07.intermediate.Main"
+project(':ch07:randombit').application.mainClassName="org.redfx.javaqc.ch07.randombit.Main"
+project(':ch07:randombitdebug').application.mainClassName="org.redfx.javaqc.ch07.randombitdebug.Main"
+project(':ch08:bb84').application.mainClassName="org.redfx.javaqc.ch08.bb84.Main"
+project(':ch08:guess').application.mainClassName="org.redfx.javaqc.ch08.guess.Main"
+project(':ch08:haha').application.mainClassName="org.redfx.javaqc.ch08.haha.Main"
+project(':ch08:naive').application.mainClassName="org.redfx.javaqc.ch08.naive.Main"
+project(':ch08:superposition').application.mainClassName="org.redfx.javaqc.ch08.superposition.Main"
+project(':ch09:applyoracle').application.mainClassName="org.redfx.javaqc.ch09.applyoracle.Main"
+project(':ch09:deutsch').application.mainClassName="org.redfx.javaqc.ch09.deutsch.Main"
+project(':ch09:deutschjozsa').application.mainClassName="org.redfx.javaqc.ch09.deutschjozsa.Main"
+project(':ch09:function').application.mainClassName="org.redfx.javaqc.ch09.function.Main"
+project(':ch09:oracle').application.mainClassName="org.redfx.javaqc.ch09.oracle.Main"
+project(':ch09:reversibleX').application.mainClassName="org.redfx.javaqc.ch09.reversiblex.Main"
+project(':ch10:classicsearch').application.mainClassName="org.redfx.javaqc.ch10.classicsearch.Main"
+project(':ch10:grover').application.mainClassName="org.redfx.javaqc.ch10.grover.Main"
+project(':ch10:groveroracle').application.mainClassName="org.redfx.javaqc.ch10.groveroracle.Main"
+project(':ch10:quantumsearch').application.mainClassName="org.redfx.javaqc.ch10.quantumsearch.Main"
+project(':ch10:stepbystepgrover').application.mainClassName="org.redfx.javaqc.ch10.stepbystepgrover.Main"
+project(':ch11:classicfactor').application.mainClassName="com.javaqc.ch11.classicfactor.Main"
+project(':ch11:quantumfactor').application.mainClassName="com.javaqc.ch11.quantumfactor.Main"
+project(':ch11:semiclassicfactor').application.mainClassName="com.javaqc.ch11.semiclassicfactor.Main"
