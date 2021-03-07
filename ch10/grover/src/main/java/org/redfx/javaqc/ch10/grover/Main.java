@@ -59,6 +59,18 @@ public class Main {
 
     static Complex[][] createDiffMatrix(int dim) {
         int N = 1<<dim;
+        double N2 = 2./N;
+        Complex[][] answer = new Complex[N][N];
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                answer[i][j] = (i == j ? new Complex(N2-1) : new Complex(N2));
+            }
+        }
+        return answer;
+    }
+
+    static Complex[][] createDiffMatrixUsingGates(int dim) {
+        int N = 1<<dim;
         Gate g = new Hadamard(0);
         Complex[][] matrix = g.getMatrix();
         Complex[][] h2 = matrix;
@@ -82,6 +94,7 @@ public class Main {
         Complex[][] dif = mmul(inter1, h2);
         return dif;
     }
+
     static <T> String arr2ToString(T[][] t) {
         StringBuffer answer = new StringBuffer();
         for (int i = 0; i < t.length; i++) {
