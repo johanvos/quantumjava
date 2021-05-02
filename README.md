@@ -1,4 +1,4 @@
-# quantumjava
+# Quantum Computing samples in Java
 
 This repository contains the source code for the samples discussed in
 <a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantu
@@ -18,9 +18,9 @@ Don't worry if you don't have the book, you can still run the
 samples.
 
 ## Chapter 2: HelloWorld, Quantum Computing
-<a href="/ch02/helloworld">HelloWorld</a>
+<a href="/ch02/hellostrange">HelloStrange</a>
 
 ## Chapter 3: Qubits and Quantum Gates, the basic units in Quantum Computing
 <a href="/ch03/paulix">Pauli X</a>
-
+<a href="/ch03/paulixui">Pauli X with user interface</a>
 
