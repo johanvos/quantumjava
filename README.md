@@ -6,8 +6,7 @@ mjava&a_bid=e5166ab9">Quantum Computing for Developers</a>
 
 this repository contains a number of samples:
 
-<a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantu
-mjava&a_bid=e5166ab9">![Quantum Computing for Developers](/resources/qc.png)</a>{:style="float: right;margin-right: 7px;margin-top: 7px;"}
+<a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9"><img align="right" src="/resources/qc.png" alt="Quantum Computing for Developers"/></a>
 
 this repository contains a number of Samples:
 
