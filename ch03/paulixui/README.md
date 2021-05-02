@@ -16,7 +16,7 @@ Value = 1
 ```
 Apart from this, the quantum circuit will also be rendered,
 which results in the following image:
-(https://github.com/johanvos/quantumjava/blob/3-readme/resources/ch3-paulix.png)
+[Pauli-X UI](https://github.com/johanvos/quantumjava/blob/readme-3/resources/ch3-paulix.png)
 
 
 # What it is doing
