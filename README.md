@@ -24,3 +24,6 @@ samples.
 <a href="/ch03/paulix">Pauli X</a>  
 <a href="/ch03/paulixui">Pauli X with user interface</a>
 
+## Chapter 4: Superposition
+<a href="/ch04/hadamard">Hadamard</a>  
+
