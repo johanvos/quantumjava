@@ -27,3 +27,6 @@ samples.
 ## Chapter 4: Superposition
 <a href="/ch04/hadamard">Hadamard</a>  
 
+## Chapter 5: Entanglement
+<a href="/ch05/classiccoin">Classic coins</a>  
+

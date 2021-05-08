@@ -24,11 +24,13 @@ public class Main {
 
     public static void main(String[] args) {
         int results[] = TwoCoins.calculate(count);
+        System.out.println("=================================");
         System.out.println("We did "+count+" experiments.");
         System.out.println("0 0 occured "+results[0]+" times.");
         System.out.println("0 1 occured "+results[1]+" times.");
         System.out.println("1 0 occured "+results[2]+" times.");
         System.out.println("1 1 occured "+results[3]+" times.");
+        System.out.println("=================================");
         Platform.startup(() -> showResults(results));
     }
 
