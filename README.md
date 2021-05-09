@@ -29,4 +29,5 @@ samples.
 
 ## Chapter 5: Entanglement
 <a href="/ch05/classiccoin">Classic coins</a>  
+<a href="/ch05/quantumcoin">Quantum coins</a>  
 

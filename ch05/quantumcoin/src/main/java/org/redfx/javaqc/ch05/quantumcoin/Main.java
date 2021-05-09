@@ -31,16 +31,16 @@ public class Main {
             if (coinA && !coinB) results[2]++;
             if (coinA && coinB) results[3]++;
         }
+        System.out.println("=======================================");
         System.out.println("We did "+COUNT+" experiments.");
         System.out.println("[AB]: 0 0 occured "+results[0]+" times.");
         System.out.println("[AB]: 0 1 occured "+results[1]+" times.");
         System.out.println("[AB]: 1 0 occured "+results[2]+" times.");
         System.out.println("[AB]: 1 1 occured "+results[3]+" times.");
-        System.out.println("We will now render program");
+        System.out.println("=======================================");
 
         Renderer.renderProgram(program);
         Renderer.showProbabilities(program, 1000);
-        System.out.println("Done rendering, that's all folks.");
     }  
 
 }
