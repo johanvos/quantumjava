@@ -28,6 +28,6 @@ which results in the following image:
 
 # What it is doing
 
-This sample shows how classic coins result in equal probabilities.
+This sample shows how independent quantum coins result in equal probabilities.
 
-You can learn more about this sample in Chapter 5 of [Quantum Computing for Java Developers](https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9). It is discussed in 5.2: "Independent probabilities, the classic way"
+You can learn more about this sample in Chapter 5 of [Quantum Computing for Java Developers](https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9). It is discussed in 5.2: "Independent probabilities, the quantum way"
