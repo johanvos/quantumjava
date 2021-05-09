@@ -31,4 +31,5 @@ samples.
 <a href="/ch05/classiccoin">Classic coins</a>  
 <a href="/ch05/quantumcoin">Quantum coins</a>  
 <a href="/ch05/cnot">CNot gate</a>  
+<a href="/ch05/bellstate">Bell state</a>  
 
