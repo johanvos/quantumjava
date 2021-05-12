@@ -33,3 +33,10 @@ samples.
 <a href="/ch05/cnot">CNot gate</a>  
 <a href="/ch05/bellstate">Bell state</a>  
 
+## Chapter 6: Quantum networking, the basics
+<a href="/ch06/classic">Classic network</a>  
+<a href="/ch06/classiccopy">No-cloning theorem</a>  
+<a href="/ch06/teleport">Quantum Teleportation</a>  
+<a href="/ch06/repeater">Quantum Repeater</a>  
+
+
