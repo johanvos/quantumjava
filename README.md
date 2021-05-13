@@ -39,4 +39,9 @@ samples.
 <a href="/ch06/teleport">Quantum Teleportation</a>  
 <a href="/ch06/repeater">Quantum Repeater</a>  
 
+## Chapter 7: Our HelloWorld explained
+<a href="/ch07/randombit">RandomBit</a>  
+<a href="/ch07/randombitdebug">RandomBit with debug</a>  
+<a href="/ch07/add1">Quantum Adder</a>  
+<a href="/ch07/add2">Quantum Adder with carry bit</a>  
 
