@@ -17,6 +17,7 @@ Adding 1 + 1 = 0
 ```
 
 The image that contains the quantum circuit for this is also shown:
+
 ![Quantum adder](/resources/ch7-add1.png)
 
 # What it is doing

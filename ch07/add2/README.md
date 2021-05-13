@@ -18,6 +18,7 @@ Adding 1 + 1 = 2
 ```
 
 On top of that, the quantum circuit for adding 1 + 1 is shown:
+
 ![quantum carry adder](/resources/ch7-add2.png)
 
 # What it is doing
