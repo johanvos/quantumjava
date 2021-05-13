@@ -45,3 +45,10 @@ samples.
 <a href="/ch07/add1">Quantum Adder</a>  
 <a href="/ch07/add2">Quantum Adder with carry bit</a>  
 
+## Chapter 8: Secure Communication using quantum computing
+<a href="/ch08/naive">A first (naive) approach</a>  
+<a href="/ch08/haha">Applying 2 Hadamard gates</a>  
+<a href="/ch08/superposition">Using superposition</a>  
+<a href="/ch08/guess">Guess the possibilities</a>  
+<a href="/ch08/bb84">QKD in Java</a>  
+

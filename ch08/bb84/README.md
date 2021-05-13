@@ -1,4 +1,7 @@
+# QKD in Java
 This sample demonstrate the BB84 algorithm in Java.
+
+# Running the sample
 Execute with
 
 ```
@@ -22,9 +25,9 @@ JavaFX Platform initialized
 
 and a UI similar to this:
 
-<img src="https://github.com/johanvos/quantumjava/blob/master/ch08/bb84/bb84.png"/>
+![bb84](/resources/ch8-bb84.png)
 
-More sample info at the root of this project.
-This sample uses the <a href="https://github.com/redfx-quantum/strange">Strange</a>
-Quantum Simulator.
-It is discussed in <a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9">Quantum Computing for Java Developers</a>.
+# What it is doing
+
+This code shows the BB84 algorithm for Quantum Key Distribution, implemented in Java.
+You can learn more about this sample in Chapter 8 of [Quantum Computing for Java Developers](https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9). It is discussed in 8.6: "QKD in Java"
