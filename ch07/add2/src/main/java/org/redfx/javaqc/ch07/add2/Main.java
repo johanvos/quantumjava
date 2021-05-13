@@ -15,10 +15,12 @@ public class Main {
 
     public static void main (String[] args) {
         
-        Program program = new Program(3);
+        Program program = new Program(4);
+        Step prep = new Step(new X(1), new X(3));
         Step step0 = new Step(new Toffoli(0,1,2));
         Step step1 = new Step(new Cnot(0,1));
-        program.addSteps(step0, step1);
+        Step step2 = new Step (new X(0), new Cnot(1,3));
+        program.addSteps(prep, step0, step1, step2);
         
         QuantumExecutionEnvironment qee = new SimpleQuantumExecutionEnvironment();
         Result result = qee.runProgram(program);
