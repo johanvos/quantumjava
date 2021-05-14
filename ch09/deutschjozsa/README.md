@@ -1,6 +1,6 @@
 # Deutsch Josza algoritm
 
-This code demonstrates the Deutsch Josza algorithm
+This code demonstrates the Deutsch Jozsa algorithm
 
 # Running the sample
 
@@ -23,11 +23,11 @@ f = 1, val = 1
 
 Also, the following quantum circuit is rendered:
 
-![deutschjosza](/resources/ch9-deutschjosza.png)
+![deutschjozsa](/resources/ch9-deutschjozsa.png)
 
 
 # What it is doing
 
-This sample shows how the Deutsch Josza algorithm works.
+This sample shows how the Deutsch Jozsa algorithm works.
 
-You can learn more about this sample in Chapter 9 of [Quantum Computing for Java Developers](https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9). It is discussed in 9.7: "Deutsch Josza algorithm".
+You can learn more about this sample in Chapter 9 of [Quantum Computing for Java Developers](https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9). It is discussed in 9.7: "Deutsch Jozsa algorithm".
