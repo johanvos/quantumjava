@@ -52,3 +52,11 @@ samples.
 <a href="/ch08/guess">Guess the possibilities</a>  
 <a href="/ch08/bb84">QKD in Java</a>  
 
+## Chapter 9: Deutsch-Jozsa algorithm
+<a href="/ch09/function">Constant and balanced functions</a>  
+<a href="/ch09/reversibleX">Reversible gates</a>  
+<a href="/ch09/oracle">Quantum oracle</a>  
+<a href="/ch09/applyoracle">Applying a Quantum oracle</a>  
+<a href="/ch09/deutsch">Deutsch algorithm</a>  
+<a href="/ch09/deutschjozsa">Deutsch Jozsa algorithm</a>  
+
