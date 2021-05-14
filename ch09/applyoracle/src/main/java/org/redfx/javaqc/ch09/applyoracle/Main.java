@@ -9,6 +9,7 @@ import org.redfx.strange.Step;
 import org.redfx.strange.gate.Oracle;
 import org.redfx.strange.gate.X;
 import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
+import org.redfx.strangefx.render.Renderer;
 
 public class Main {
 
@@ -35,6 +36,9 @@ public class Main {
 
             program.addStep(oracleStep);
             Result result = simulator.runProgram(program);
+            if (choice == 1) {
+                Renderer.renderProgram(program);
+            }
             Qubit[] qubits = result.getQubits();
 
             boolean constant = (choice == 0) || (choice == 3);

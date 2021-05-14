@@ -28,8 +28,8 @@ public class Main {
 
         Result result = simulator.runProgram(program);
         Qubit[] qubits = result.getQubits();
-        Renderer.showProbabilities(program,1000);
         Renderer.renderProgram(program);
+        Renderer.showProbabilities(program,1000);
     }
 
 }

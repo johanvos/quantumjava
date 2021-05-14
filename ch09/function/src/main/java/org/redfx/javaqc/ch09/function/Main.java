@@ -30,10 +30,5 @@ public class Main {
                     + " function"));
         }
     }
-    
-    private Function<Integer, Integer> getFunction() {
-        return null;
-    }
-
 
 }
