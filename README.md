@@ -60,3 +60,10 @@ samples.
 <a href="/ch09/deutsch">Deutsch algorithm</a>  
 <a href="/ch09/deutschjozsa">Deutsch Jozsa algorithm</a>  
 
+## Chapter 10: Grover's Search Algorithm
+<a href="/ch10/classicsearch">A classic search function</a>  
+<a href="/ch10/quantumsearch">Quantum search</a>  
+<a href="/ch10/grover">The algorithm behind Grover's search</a>  
+<a href="/ch10/stepbystepgrover">The algorithm, step by step</a>  
+<a href="/ch10/groveroracle">The quantum Oracle in Grover's search</a>  
+
