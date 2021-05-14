@@ -58,5 +58,5 @@ samples.
 <a href="/ch09/oracle">Quantum oracle</a>  
 <a href="/ch09/applyoracle">Applying a Quantum oracle</a>  
 <a href="/ch09/deutsch">Deutsch algorithm</a>  
-<a href="/ch09/deutschjosza">Deutsch Josza algorithm</a>  
+<a href="/ch09/deutschjozsa">Deutsch Jozsa algorithm</a>  
 
