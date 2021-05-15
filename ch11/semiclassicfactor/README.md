@@ -11,12 +11,11 @@ To run this application, simply run
 The expected outcome looks like this:
 
 ```
-We need to factor 8671
-Pick a random number a, a < N: 7455
+We need to factor 7395
+Pick a random number a, a < N: 5672
 calculate gcd(a, N):1
-period of f = 924
-Factored 8671 in 1 and 8671
-
+period of f = 16
+Factored 7395 in 17 and 435
 ```
 
 # What it is doing
