@@ -1,7 +1,7 @@
-# Classic factorization
+# Classic factorization using period finding
 
-This sample shows a simple, naive, classic approach to the integer factorization problem.
-We introduce the problem space, but there is nothing quantum-related in this chapter.
+This sample shows a different, but not faster classic approach to the integer factorization problem.
+We will later benefit from this approach.
 
 # Running the sample
 
