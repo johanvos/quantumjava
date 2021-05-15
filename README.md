@@ -67,8 +67,8 @@ samples.
 <a href="/ch10/stepbystepgrover">The algorithm, step by step</a>  
 <a href="/ch10/groveroracle">The quantum Oracle in Grover's search</a>  
 
-## Chapter 10: Shor's Algorithm
-<a href="/ch10/classicfactor">A classic factoring approach</a>  
-<a href="/ch10/semiclassicfactor">A classic implementation of a quantum factoringapproach</a>  
-<a href="/ch10/quantumfactor">A quantum factoring approach</a>  
+## Chapter 11: Shor's Algorithm
+<a href="/ch11/classicfactor">A classic factoring approach</a>  
+<a href="/ch11/semiclassicfactor">A classic implementation of a quantum factoringapproach</a>  
+<a href="/ch11/quantumfactor">A quantum factoring approach</a>  
 
