@@ -71,9 +71,9 @@ public class Main {
         int r = 1;
         long mp = (long) (Math.pow(a,r)) % N;
         BigInteger bn = BigInteger.valueOf(N);
+        BigInteger bi = BigInteger.valueOf(a);
         while (mp != 1) {
             r++;
-            BigInteger bi = BigInteger.valueOf(a);
             BigInteger mpd = bi.pow(r);
             BigInteger mpb = mpd.mod(bn);
             mp = mpb.longValue();
