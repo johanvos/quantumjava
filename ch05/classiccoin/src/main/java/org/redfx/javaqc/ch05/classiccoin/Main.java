@@ -52,7 +52,7 @@ public class Main {
     private static ObservableList<XYChart.Series<String, Integer>> getChartData(int[] results) {
         ObservableList<XYChart.Series<String, Integer>> answer = FXCollections.observableArrayList();
         XYChart.Series<String, Integer> series = new XYChart.Series<>();
-        series.setName("occurences");
+        series.setName("occurrences");
         answer.add(series);
         for (int i = 0; i < results.length;i++) {
             series.getData().add(new XYChart.Data<>(getFixedBinaryString(i, (int) (Math.log(results.length)/Math.log(2))), results[i]));
