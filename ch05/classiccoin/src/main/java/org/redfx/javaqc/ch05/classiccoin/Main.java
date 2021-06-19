@@ -16,9 +16,10 @@ import javafx.stage.Stage;
 public class Main {
 
     private static final int count = 1000;
+    private static final Random random = new Random();
 
     private static boolean randomBit() {
-        boolean answer = new Random().nextBoolean();
+        boolean answer = random.nextBoolean();
         return answer;
     }
 
