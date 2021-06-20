@@ -3,7 +3,7 @@ package org.redfx.javaqc.ch10.classicsearch;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.function.Function;
+import java.util.function.ToIntFunction;
 
 public class Main {
 
@@ -42,7 +42,7 @@ public class Main {
 }
     
     void functionSearch() {
-        Function<Person, Integer> f29Mexico
+        ToIntFunction<Person> f29Mexico
                 = (Person p) -> ((p.getAge() == 29) && (p.getCountry().equals("Mexico"))) ? 1 : 0;
         for (int i = 0; i < 10; i++) {
             List<Person> persons = prepareDatabase();
@@ -52,12 +52,12 @@ public class Main {
         }
     }
 
-    Person findPersonByFunction(List<Person> persons, Function<Person, Integer> function) {
+    Person findPersonByFunction(List<Person> persons, ToIntFunction<Person> function) {
         boolean found = false;
         int idx = 0;
         while (!found && (idx<persons.size())) {
             Person target = persons.get(idx++);
-            if (function.apply(target) == 1) {
+            if (function.applyAsInt(target) == 1) {
                 found = true;
             }
         }
