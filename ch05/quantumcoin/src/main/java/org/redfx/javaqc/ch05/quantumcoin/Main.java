@@ -33,10 +33,10 @@ public class Main {
         }
         System.out.println("=======================================");
         System.out.println("We did "+COUNT+" experiments.");
-        System.out.println("[AB]: 0 0 occured "+results[0]+" times.");
-        System.out.println("[AB]: 0 1 occured "+results[1]+" times.");
-        System.out.println("[AB]: 1 0 occured "+results[2]+" times.");
-        System.out.println("[AB]: 1 1 occured "+results[3]+" times.");
+        System.out.println("[AB]: 0 0 occurred "+results[0]+" times.");
+        System.out.println("[AB]: 0 1 occurred "+results[1]+" times.");
+        System.out.println("[AB]: 1 0 occurred "+results[2]+" times.");
+        System.out.println("[AB]: 1 1 occurred "+results[3]+" times.");
         System.out.println("=======================================");
 
         Renderer.renderProgram(program);
