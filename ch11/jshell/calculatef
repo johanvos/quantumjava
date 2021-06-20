@@ -1,0 +1,21 @@
+int gcd(int a, int b) {
+        int x = a > b ? a : b;
+        int y = x == a ? b : a;
+        int z = 0;
+        while (y != 0) {
+            z = x % y;
+            x = y;
+            y = z;
+        }
+        return x;
+}
+
+int N = 493;
+int a = 6;
+int p = 112;
+int u = 1;
+for (int i = 0; i < p/2; i++) {
+    u = (u * p) % N;
+}
+System.out.println("This is u mod N: " + u);
+System.out.println("This is gcd: " + gcd(u + 1, N));

@@ -5,10 +5,22 @@ import java.math.BigInteger;
 
 public class Main {
 
+    static final int MAX_TRIES = 100;
+
     public static void main (String[] args) {
         int target = (int)(10000 * Math.random());
-        int f = factor (target);
-        System.out.println("Factored "+target+" in "+f+ " and "+target/f);
+        int cnt = 0;
+        int f = -1;
+        while (cnt < MAX_TRIES) {
+            f = factor(target);
+            if (f > 0) break;
+            cnt++;
+        }
+        if (cnt < MAX_TRIES) {
+            System.out.println("Factored "+target+" in "+f+ " and "+target/f);
+        } else {
+            System.out.println("Failed to factor " + target+" after " + MAX_TRIES+" tries. Might be a prime number?");
+        }
     }
 
     public static int factor (int N) {
@@ -33,18 +45,21 @@ public class Main {
         if (p%2 == 1) { 
             // If the period turns out to be an odd number, we can't use it and have to repeat the process
             System.out.println("bummer, odd period, restart.");
-            return factor(N);
+            return -1;
         }
         // Perform some minor mathematical operations on the period to obtain a factor of `N`.
-        int md = (int)(Math.pow(a, p/2) +1);
-        int m2 = md%N; 
+        int md = 1;
+        for (int i = 0; i < p/2; i ++) {
+            md = (md * a) % N;
+        }
+        md = md + 1;
+        int m2 = md % N;
         if (m2 == 0) { 
             System.out.println("bummer, m^p/2 + 1 = 0 mod N, restart");
-            return factor(N);
+            return -1;
         }
-        int f2 = (int)Math.pow(a, p/2) -1;
-        return gcd(N, f2);
-
+        int factor = gcd(N, md);
+        return factor;
     }
 
     public static int gcd (int a, int b) {
@@ -56,9 +71,9 @@ public class Main {
         int r = 1;
         long mp = (long) (Math.pow(a,r)) % N;
         BigInteger bn = BigInteger.valueOf(N);
+        BigInteger bi = BigInteger.valueOf(a);
         while (mp != 1) {
             r++;
-            BigInteger bi = BigInteger.valueOf(a);
             BigInteger mpd = bi.pow(r);
             BigInteger mpb = mpd.mod(bn);
             mp = mpb.longValue();
