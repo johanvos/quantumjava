@@ -5,9 +5,9 @@ public class Main {
     static Boolean makeCopy(Boolean source) {
         Boolean target;
         if (source == true) {
-            target = Boolean.valueOf(true);
+            target = new Boolean(true);
         } else {
-            target = Boolean.valueOf(false);
+            target = new Boolean(false);
         }
         return target;
     }
