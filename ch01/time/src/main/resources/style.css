@@ -1,0 +1,16 @@
+.chart-series-line.default-color0 {    
+    -fx-stroke: rgba(26,26,26);
+}
+
+.chart-series-line.series1.default-color1 {    
+    -fx-stroke: rgba(188,188,188);
+}
+
+.chart-legend-item-symbol.chart-line-symbol.series0.default-color0 {
+    -fx-background-color: rgba(26,26,26);
+}
+
+.chart-legend-item-symbol.chart-line-symbol.series1.default-color1 {
+    -fx-background-color: rgba(188,188,188);
+}
+
