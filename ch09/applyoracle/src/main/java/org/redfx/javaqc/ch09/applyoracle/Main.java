@@ -14,13 +14,13 @@ import org.redfx.strangefx.render.Renderer;
 public class Main {
 
     public static void main(String[] args) {
-        System.err.println("Use 00 as input");
+        System.err.println("Use |00> as input");
         try00();
-        System.err.println("\nUse 01 as input");
+        System.err.println("\nUse |01> as input");
         try01();
-        System.err.println("\nUse 10 as input");
+        System.err.println("\nUse |10> as input");
         try10();
-        System.err.println("\nUse 11 as input");
+        System.err.println("\nUse |11> as input");
         try11();
     }
     
@@ -43,8 +43,8 @@ public class Main {
 
             boolean constant = (choice == 0) || (choice == 3);
 
-            System.err.println((constant ? "C" : "B") + ", measured = "
-                    + qubits[0].measure() + ", " + qubits[1].measure());
+             System.err.println((constant ? "C" : "B") + ", measured = |"
+                    + qubits[1].measure() + qubits[0].measure()+">");
         }
     }
 
@@ -68,8 +68,8 @@ public class Main {
 
             boolean constant = (choice == 0) || (choice == 3);
 
-            System.err.println((constant ? "C" : "B") + ", measured = "
-                    + qubits[0].measure() + ", " + qubits[1].measure());
+             System.err.println((constant ? "C" : "B") + ", measured = |"
+                    + qubits[1].measure() + qubits[0].measure()+">");
         }
     }
     
@@ -93,8 +93,8 @@ public class Main {
 
             boolean constant = (choice == 0) || (choice == 3);
 
-            System.err.println((constant ? "C" : "B") + ", measured = "
-                    + qubits[0].measure() + ", " + qubits[1].measure());
+            System.err.println((constant ? "C" : "B") + ", measured = |"
+                    + qubits[1].measure() + qubits[0].measure()+">");
         }
     }
     
@@ -119,11 +119,12 @@ public class Main {
 
             boolean constant = (choice == 0) || (choice == 3);
 
-            System.err.println((constant ? "C" : "B") + ", measured = "
-                    + qubits[0].measure() + ", " + qubits[1].measure());
+             System.err.println((constant ? "C" : "B") + ", measured = |"
+                    + qubits[1].measure() + qubits[0].measure()+">");
         }
     }
     
+
     static Oracle createOracle(int f) {
         Complex[][] matrix = new Complex[4][4];
 
@@ -136,21 +137,21 @@ public class Main {
                 return new Oracle(matrix);
             case 1:
                 matrix[0][0] = Complex.ONE;
-                matrix[1][1] = Complex.ONE;
-                matrix[2][3] = Complex.ONE;
-                matrix[3][2] = Complex.ONE;
+                matrix[1][3] = Complex.ONE;
+                matrix[2][2] = Complex.ONE;
+                matrix[3][1] = Complex.ONE;
                 return new Oracle(matrix);
             case 2:
-                matrix[0][1] = Complex.ONE;
-                matrix[1][0] = Complex.ONE;
-                matrix[2][2] = Complex.ONE;
+                matrix[0][2] = Complex.ONE;
+                matrix[1][1] = Complex.ONE;
+                matrix[2][0] = Complex.ONE;
                 matrix[3][3] = Complex.ONE;
                 return new Oracle(matrix);
             case 3:
-                matrix[0][1] = Complex.ONE;
-                matrix[1][0] = Complex.ONE;
-                matrix[2][3] = Complex.ONE;
-                matrix[3][2] = Complex.ONE;
+                matrix[0][2] = Complex.ONE;
+                matrix[1][3] = Complex.ONE;
+                matrix[2][0] = Complex.ONE;
+                matrix[3][1] = Complex.ONE;
                 return new Oracle(matrix);
             default:
                 throw new IllegalArgumentException("Wrong index in oracle");

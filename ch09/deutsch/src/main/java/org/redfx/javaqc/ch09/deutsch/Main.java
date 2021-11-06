@@ -64,8 +64,8 @@ public class Main {
             case 1:
                 matrix[0][0] = Complex.ONE;
                 matrix[1][3] = Complex.ONE;
-                matrix[2][1] = Complex.ONE;
-                matrix[3][2] = Complex.ONE;
+                matrix[2][2] = Complex.ONE;
+                matrix[3][1] = Complex.ONE;
                 return new Oracle(matrix);
             case 2:
                 matrix[0][2] = Complex.ONE;
