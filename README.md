@@ -4,7 +4,7 @@ This repository contains the source code for the samples discussed in
 <a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantu
 mjava&a_bid=e5166ab9">Quantum Computing for Developers</a>
 
-<a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9"><img align="right" src="/resources/qc.png" alt="Quantum Computing for Developers"/></a>
+<a href="https://www.manning.com/books/quantum-computing-for-java-developers?a_aid=quantumjava&a_bid=e5166ab9"><img align="right" src="https://user-images.githubusercontent.com/767876/187063034-b40b74c8-7ff1-4236-b643-383da8003723.png" alt="Quantum Computing for Developers"/></a>
 
 It is based on the <a href="https://github.com/redfx-quantum/strange">Strange</a> Quantum Simulator, which provides an execution environment for
 quantum algorithms in Java.  
