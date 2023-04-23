@@ -20,7 +20,7 @@ subprojects {
     apply plugin: "org.openjfx.javafxplugin"
 
     javafx {
-        version = "15.0.1"
+        version = "20.0.1"
         modules = [ 'javafx.controls' ]
     }
 
@@ -29,8 +29,8 @@ subprojects {
     }
 
     dependencies {
-        implementation 'org.redfx:strange:0.0.17'
-        implementation 'org.redfx:strangefx:0.0.10'
+        implementation 'org.redfx:strange:0.0.19'
+        implementation 'org.redfx:strangefx:0.1.0'
     }
 }
 
