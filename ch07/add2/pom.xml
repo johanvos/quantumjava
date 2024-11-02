@@ -10,25 +10,25 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>11</maven.compiler.target>
-    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>13.0.1</version>
+      <version>23.0.1</version>
     </dependency>
     <dependency>
       <groupId>org.redfx</groupId>
       <artifactId>strange</artifactId>
-      <version>0.1.2-SNAPSHOT</version>
+      <version>0.1.3</version>
     </dependency>
     <dependency>
       <groupId>org.redfx</groupId>
       <artifactId>strangefx</artifactId>
-      <version>0.1.2-SNAPSHOT</version>
+      <version>0.1.3</version>
     </dependency>
   </dependencies>
   <build>
@@ -36,7 +36,7 @@
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.4</version>
+        <version>0.0.8</version>
         <configuration>
           <mainClass>org.redfx.javaqc.ch07.add2.Main</mainClass>
         </configuration>
